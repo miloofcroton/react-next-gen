@@ -29,7 +29,7 @@ class InitialPropsDetail extends React.Component<Props> {
 
     if (errors) {
       return (
-        <Layout title={`Error | Next.js + TypeScript Example`}>
+        <Layout title="Error | Next.js + TypeScript Example">
           <p>
             <span style={{ color: 'red' }}>Error:</span> {errors}
           </p>

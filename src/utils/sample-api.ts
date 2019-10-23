@@ -5,7 +5,7 @@ export async function sampleFetchWrapper(
   init?: RequestInit,
 ) {
   try {
-    const data = await fetch(input, init).then(res => res.json());
+    const data = await fetch(input, init).then((res) => res.json());
     return data;
   } catch (err) {
     throw new Error(err.message);

@@ -4,7 +4,7 @@ import { sampleUserData } from '../../../utils/sample-data';
 export default (req: NextApiRequest, res: NextApiResponse) => {
   try {
     const { id } = req.query;
-    const selected = sampleUserData.find(data => data.id === Number(id));
+    const selected = sampleUserData.find((data) => data.id === Number(id));
 
     if (!selected) {
       throw new Error('Cannot find user');
