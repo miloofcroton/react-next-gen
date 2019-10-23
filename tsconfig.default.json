@@ -1,7 +1,5 @@
 {
   "compilerOptions": {
-    "strict": false,
-    "noImplicitAny": false,
     "target": "es5",
     "lib": [
       "dom",
@@ -10,21 +8,22 @@
     ],
     "allowJs": true,
     "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
+    "strict": false,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
-    "jsx": "preserve",
+    "esModuleInterop": true,
     "module": "esnext",
-    "isolatedModules": true,
-    "resolveJsonModule": true,
     "moduleResolution": "node",
-    "baseUrl": "./src"
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve"
   },
-  "include": [
-    "src"
-  ],
   "exclude": [
     "node_modules"
+  ],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
   ]
 }

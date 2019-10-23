@@ -13,7 +13,7 @@ const IndexPage: NextPage = () => {
         </Link>
       </p>
     </Layout>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;

@@ -9,6 +9,11 @@
     "@types/node": "^12.11.5",
     "@types/react": "^16.9.9",
     "@types/react-dom": "^16.9.2",
+    "@typescript-eslint/eslint-plugin": "^2.5.0",
+    "@typescript-eslint/parser": "^2.5.0",
+    "eslint": "^6.5.1",
+    "eslint-plugin-react": "^7.16.0",
+    "prettier": "^1.18.2",
     "rimraf": "^3.0.0",
     "typescript": "^3.6.4"
   },
@@ -26,6 +31,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "type-check": "tsc"
+    "types:check": "tsc",
+    "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "eslint ./src --ext .js,.jsx,.ts,.tsx --fix",
+    "lint:pretty": "prettier --write '{src}/**/*.{js,jsx}'"
   }
 }
