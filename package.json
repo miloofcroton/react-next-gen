@@ -21,7 +21,8 @@
     "react-dom": "16.11.0"
   },
   "scripts": {
-    "node:clean": "rimraf ./node_modules",
+    "clean:node": "rimraf ./node_modules",
+    "clean:next": "rimraf ./.next",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
