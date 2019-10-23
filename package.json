@@ -34,6 +34,6 @@
     "types:check": "tsc",
     "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx",
     "lint:fix": "eslint ./src --ext .js,.jsx,.ts,.tsx --fix",
-    "lint:pretty": "prettier --write '{src}/**/*.{js,jsx}'"
+    "lint:prettify": "prettier --write './src/**/*.{js,jsx,ts,tsx}'"
   }
 }
