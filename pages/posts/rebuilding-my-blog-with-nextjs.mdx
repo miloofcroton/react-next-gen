@@ -1,0 +1,126 @@
+import { withRouter } from "next/router";
+import BlogPost from "../../components/layouts/blog-post";
+
+export const meta = {
+  published: true,
+  publishedAt: "2019-05-13",
+  title: "Rebuilding my blog with Next.js",
+  summary:
+    "I use my website for hacking with new technologies more than writing content. This time I&rsquo;m rebuilding it using Next.js and if you&rsquo;re reading this, I already deployed the first version.",
+  image: "/static/rebuilding-my-blog-with-nextjs.jpg",
+  status: "In Progress"
+};
+
+
+export default withRouter(({ children, router }) => (
+  <BlogPost path={router.pathname} meta={meta}>
+    {children}
+  </BlogPost>
+));
+
+I use my website for hacking with new technologies more than writing content. This time I&rsquo;m rebuilding it using Next.js and if you&rsquo;re reading this, I already deployed the first version.
+
+## Why Next.js
+
+With the rise of React and the SSR frameworks, e.g. Gatsby and Next.js, I saw a lot of good looking, fast blogs built with Gatsby. [You probably have already seen Dan&rsquo;s](https://overreacted.io/). Of course I went and tried to setup my own, but the thing I didn't like was that Gatsby blog-starter uses GraphQL, which is awesome, but I don't think I need that for a simple blog.
+
+So with the bad habit I have of wanting to build my own version of everything, I started to investigate how to build my blog with Next.js.
+
+## How
+
+I got familiar with Next.js in the past few months by contributing an example and other small changes. I&rsquo;m also currently building two products with it, so I felt confident that I could build something decent.
+
+### Checklist
+
+I started with an empty project created with [create-next-app](https://github.com/segment-open-source-transfer/create-next-app) and from there I made a list of the features I needed.
+
+1. Create an object of posts from a list of [MDX](https://mdxjs.com/) files
+2. Add syntax highlighting
+3. Add an RSS feed
+4. Add pagination
+
+For a Next.js project, all these things were new for me and I had no idea how to implement them. So, I went to investigate how other people are doing it.
+
+Guillermo Rauch ([@rauchg](https://twitter.com/rauchg)) told me that Max Stoiber&rsquo;s site ([@mxstbr](https://twitter.com/mxstbr)) was one of his favorite blogs built with Next.js out there, so I looked at his [GitHub repo](https://github.com/mxstbr/mxstbr.com).
+
+80% of the work was already done in Max&rsquo;s repository and I was fortunate to chat with him about it too. Most of the credit for the work goes to him, his implementation is pretty clever and helped me a lot.
+
+### 1. An `Object` of blog posts
+
+To solve the first issue, Max used [babel-plugin-preval/macro](https://github.com/kentcdodds/babel-plugin-preval). This package lets you run Node code dynamically in a client context and export the results.
+
+Using the file system module we get all the files from given folder (e.g., `posts/`), extract the meta data, content, path and return an `Object` with all the info we need. [See Max&rsquo;s implementation](https://github.com/mxstbr/mxstbr.com/blob/master/data/get-blog-posts.js).
+
+With this we can import the list of blog posts as `import blogposts from "../../data/blog-posts";` and use it in a `blog.js` page. [See Max&rsquo;s implementation](https://github.com/mxstbr/mxstbr.com/blob/master/pages/thoughts/index.js) and [mine](https://github.com/j0lv3r4/jolvera.dev/blob/master/pages/blog.js).
+
+For a simpler example we could do something like this.
+
+```jsx
+import blogposts from "../posts/index";
+
+const Blog = () => (
+  <ul>
+    {blogposts.map((post, index) => (
+      <li key={index}>
+        <a href={post.path}>{post.title}</a>
+        <time>{post.publishedAt}</time>
+
+        {post.summary}
+      </li>
+    ))}
+  </ul>
+);
+
+export default Blog;
+```
+
+### 2. Syntax highlighting
+
+The second issue was trickier. Basic syntax highlighting worked with [rehype-prism](https://github.com/mapbox/rehype-prism), but one key feature was missing. The ability to highlight a line of code, e.g.:
+
+<img
+  src="/static/overreacted-code-snippet.jpg"
+  alt="Snippet of code from Dan Abramov&rsquo;s blog"
+/>
+
+This was probably the hardest part of the process (for me). To implement this I went to a rabbit hole of learning about [unified.js](https://unified.js.org/) and how syntax trees work. I had to understand how the Gatsby team and contributors implemented their own and how to plug it into the MDX plugin interface.
+
+I <s>stole code</s> got inspiration from these packages:
+
+- [gatsby-remark-prismjs](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-remark-prismjs)
+- [@mapbox/rehype-prism](https://github.com/mapbox/rehype-prism)
+- [refractor](https://github.com/wooorm/refractor)
+
+I won't go in detail, but I integrated code from those three packages to get syntax highlighting working along with the line highlighting feature. There are other features that are missing but this will do it for now. [See the current implementation](https://github.com/j0lv3r4/jolvera.dev/blob/master/mdx-prism/index.js), I'll probably make a pull request to `rehype-prism` to add this functionality or publish a separate module.
+
+### 3. RSS feed
+
+This was easy. I followed Max&rsquo;s lead of using the [JSON feed spec](https://jsonfeed.org/) and reformatting the blog post `Object` into a JSON RSS feed.
+
+I still haven't figure out how to create the JSON file on build time, so for now I'm running the [node script](https://github.com/j0lv3r4/jolvera.dev/blob/master/posts/rss-feed.js) before committing changes to generate the feed and [routing it as a static file](https://github.com/j0lv3r4/jolvera.dev/blob/master/now.json#L7).
+
+### 4. Pagination
+
+This was easy, too. I used the [pagination library](https://www.npmjs.com/package/pagination) with the [blog posts `Object`&rsquo;s length and other options as input](https://github.com/j0lv3r4/jolvera.dev/blob/master/pages/blog.js#L13-L18).
+
+## Deployment
+
+After all this I got the project into a good-enough working blog using Next.js, at this point I was really excited to have it deployed and that [Saturday night I decided to launch it using Now 2.0](https://twitter.com/_jolvera/status/1127431569042550784?s=20).
+
+## Development environment
+
+One of the benefits of using Next.js with Now 2.0 is the new [`now dev`](https://zeit.co/blog/now-dev) command. You get to see exactly what you will get in production. It uses the same `now.json` configuration file and pretty much everything else works the same way.
+
+All the work felt easier than it should.
+
+## Conclusion
+
+The website feels really fast. The [Lighthouse audit](https://twitter.com/_jolvera/status/1127432136565383169?s=20) results are amazing. The easiness of adding content feels as if you were dealing with a CMS, except there&rsquo;s no login.
+
+The SSR and pre-fetching features Next.js provides makes the site feel very smooth, fast and responsive.
+
+So far I'm very happy with the experience of developing with Next.js and Now and the results speak for themselves. I will submit a pull request to the Next.js repository to add the blog as an example, and I hope somebody will find this work useful as I found Max&rsquo;s.
+
+Also published in:
+
+- <a rel="syndication" class="u-syndication" href="https://dev.to/jolvera/rebuilding-my-blog-with-next-js-1h84">DEV.to</a>

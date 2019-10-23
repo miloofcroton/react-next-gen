@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "name": "jolvera.dev",
+  "build": {
+    "env": {
+      "WEBMENTION_IO_TOKEN": "@webmention-io-token",
+      "DOMAIN": "@jolveradev-domain",
+      "FATHOM_ID": "@jolveradev-fathom-id"
+    }
+  },
+  "builds": [{ "src": "package.json", "use": "@now/next" }],
+  "routes": [
+    { "src": "/feed.json", "dest": "/_next/static/feed.json" },
+    { "src": "/blog/(?<page>[^/]+)$", "dest": "/blog?page=$page" }
+  ]
+}
