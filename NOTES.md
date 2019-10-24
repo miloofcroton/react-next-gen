@@ -1,0 +1,3 @@
+## Random thoughts
+
+- Do I want to add `emotion-server` to prevent page flashes of style? Make sure I don't have style loading issues down the road...

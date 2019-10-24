@@ -8,7 +8,7 @@ import { NextPage } from 'next';
 
 const IndexPage: NextPage = () => {
   return (
-    <Layout title="Home | Next.js + TypeScript Example">
+    <Layout title="Home | Next.js Starter">
       <h1 css={{ color: 'steelblue' }}>Hello Next.js 👋</h1>
       <p>
         <Link href="/about">
