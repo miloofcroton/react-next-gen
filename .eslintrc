@@ -110,7 +110,8 @@
 		}],
 
 		// React
-		"react/jsx-closing-bracket-location": "error",
+    "react/jsx-closing-bracket-location": "off",
+    // "react/jsx-closing-bracket-location": "error",
 		"react/jsx-uses-react": "error",
 		"react/jsx-key": "error",
 		"react/jsx-uses-vars": "error",

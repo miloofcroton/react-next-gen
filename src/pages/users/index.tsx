@@ -28,10 +28,10 @@ const WithInitialProps: NextPage<Props> = ({ items, pathname }) => (
   </Layout>
 );
 
+/** Notes:
+ * Example for including initial props in a Next.js function component page.
+ * Don't forget to include the respective types for any props passed into the component. */
 WithInitialProps.getInitialProps = async ({ pathname }) => {
-  // Example for including initial props in a Next.js function component page.
-  // Don't forget to include the respective types for any props passed into
-  // the component.
   const items: User[] = await fetchWrapper(
     `http://localhost:${process.env.PORT}/api/users`,
   );

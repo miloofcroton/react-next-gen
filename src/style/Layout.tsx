@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
+import Nav from './Nav';
 
 type Props = {
   title?: string;
@@ -13,10 +14,13 @@ const Layout: React.FunctionComponent<Props> = ({
   <div>
     <Head>
       <title>{title}</title>
+      <link rel="icon" href="/favicon.ico" />
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
     <header>
+      <Nav />
+
       <nav>
         <Link href="/">
           <a>Home</a>
@@ -26,9 +30,25 @@ const Layout: React.FunctionComponent<Props> = ({
           <a>About</a>
         </Link>{' '}
         |{' '}
+        <Link href="/blog/story">
+          <a>Blog</a>
+        </Link>{' '}
+        |{' '}
+        <Link href="/cars">
+          <a>Cars</a>
+        </Link>{' '}
+        |{' '}
+        <Link href="/clock">
+          <a>Clock</a>
+        </Link>{' '}
+        |{' '}
         <Link href="/users">
-          <a>Users List</a>
+          <a>Users</a>
         </Link>
+        |{' '}
+        <Link href="/auth/login">
+          <a>Login</a>
+        </Link>{' '}
       </nav>
     </header>
     {children}

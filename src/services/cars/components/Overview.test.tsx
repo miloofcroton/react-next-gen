@@ -1,35 +1,8 @@
 /* eslint-env jest */
 import React from 'react';
 import { shallow } from 'enzyme';
-
 import Overview from './Overview';
-
-const __CARS__ = [
-  {
-    make: 'Volvo',
-    model: 'C30',
-    engine: 'T5',
-    year: 2018,
-    mileage: 123,
-    equipment: ['Leather', 'Seat heating', 'City Safety'],
-  },
-  {
-    make: 'Volvo',
-    model: 'XC60',
-    engine: 'D5',
-    year: 2018,
-    mileage: 456,
-    equipment: ['Leather', 'Seat heating', 'City Safety'],
-  },
-  {
-    make: 'Volvo',
-    model: 'XC90',
-    engine: 'T6',
-    year: 2018,
-    mileage: 789,
-    equipment: ['Leather', 'Seat heating', 'City Safety'],
-  },
-];
+import { mockCars } from '../data/mocks';
 
 describe('Cars overview', () => {
   test('renders the h1 title', () => {
@@ -49,7 +22,7 @@ describe('Cars overview', () => {
   });
 
   test('renders cars list with 3 items when 3 cars are provided', () => {
-    const overview = shallow(<Overview cars={__CARS__} />);
+    const overview = shallow(<Overview cars={mockCars} />);
     expect(
       overview
         .find('.Cars__List')
@@ -60,7 +33,7 @@ describe('Cars overview', () => {
   });
 
   test('renders cars list with the expected item on third place', () => {
-    const overview = shallow(<Overview cars={__CARS__} />);
+    const overview = shallow(<Overview cars={mockCars} />);
     expect(
       overview
         .find('.Cars__List')
@@ -72,7 +45,7 @@ describe('Cars overview', () => {
   });
 
   test('renders car detail after clicking on an item in cars list', () => {
-    const overview = shallow(<Overview cars={__CARS__} />);
+    const overview = shallow(<Overview cars={mockCars} />);
     overview
       .find('.Cars__List')
       .children()

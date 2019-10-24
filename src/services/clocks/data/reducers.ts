@@ -24,7 +24,7 @@ const reducers = {
 const initialState = {
   lastUpdate: 0,
   light: false,
-  count: 0
+  count: 0,
 };
 
 export const clocksReducer = reducerFactory({

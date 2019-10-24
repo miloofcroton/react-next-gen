@@ -1,10 +1,12 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { incrementCount, decrementCount, resetCount } from '../store';
+import { useSelector } from 'react-redux';
+import { incrementCount, decrementCount, resetCount } from '../data/actions';
+import { getCount } from '../data/selectors';
+import { useAnyDispatch } from 'store';
 
 export default () => {
-  const count = useSelector((state) => state.count);
-  const dispatch = useDispatch();
+  const count = useSelector(getCount);
+  const dispatch = useAnyDispatch();
 
   return (
     <div>
