@@ -1,5 +1,5 @@
 import React from 'react';
-import CarsOverview from '../modules/cars/Overview';
+import CarsOverview from '../services/cars/Overview';
 
 const CarsPage = () => <CarsOverview />;
 

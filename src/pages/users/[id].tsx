@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { NextPageContext } from 'next';
 
-import { User } from '../../interfaces';
+import { User } from '../../services/user/types';
 import Layout from '../../components/Layout';
 import ListDetail from '../../components/ListDetail';
 import { sampleFetchWrapper } from '../../utils/sample-api';
@@ -16,7 +16,7 @@ class InitialPropsDetail extends React.Component<Props> {
     try {
       const { id } = query;
       const item = await sampleFetchWrapper(
-        `http://localhost:3000/api/users/${Array.isArray(id) ? id[0] : id}`,
+        `http://localhost:${process.env.PORT}/api/users/${Array.isArray(id) ? id[0] : id}`,
       );
       return { item };
     } catch (err) {

@@ -2,7 +2,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import Login from '../Login';
+import Login from './Login';
 
 describe('Login', () => {
   test('renders the h1 title', () => {

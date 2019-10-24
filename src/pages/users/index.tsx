@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 import Layout from '../../components/Layout';
 import List from '../../components/List';
-import { User } from '../../interfaces';
+import { User } from '../../services/user/types';
 import { sampleFetchWrapper } from '../../utils/sample-api';
 
 type Props = {
@@ -33,7 +33,7 @@ WithInitialProps.getInitialProps = async ({ pathname }) => {
   // Don't forget to include the respective types for any props passed into
   // the component.
   const items: User[] = await sampleFetchWrapper(
-    'http://localhost:3000/api/users',
+    `http://localhost:${process.env.PORT}/api/users`,
   );
 
   return { items, pathname };

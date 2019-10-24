@@ -1,12 +1,12 @@
 import React, { ChangeEvent } from 'react';
 import Router from 'next/router';
 
-import * as T from './types';
+import { LoginCredentials } from '../data/types';
 
 export interface LoginProps {}
 
 export interface LoginState {
-  credentials: T.LoginCredentials;
+  credentials: LoginCredentials;
   isLoginLoading: boolean;
 }
 

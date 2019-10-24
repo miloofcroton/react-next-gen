@@ -39,6 +39,7 @@
     "husky": "^3.0.9",
     "jest": "^24.9.0",
     "lint-staged": "^9.4.2",
+    "next-compose-plugins": "^2.2.0",
     "prettier": "^1.18.2",
     "react-addons-test-utils": "^15.6.2",
     "react-docgen-typescript-loader": "^3.3.0",
@@ -48,6 +49,7 @@
     "require-context.macro": "^1.2.2",
     "rimraf": "^3.0.0",
     "ts-jest": "^24.1.0",
+    "tsconfig-paths-webpack-plugin": "^3.2.0",
     "typedoc": "^0.15.0",
     "typescript": "^3.6.4",
     "webpack": "^4.41.2"
@@ -61,6 +63,7 @@
     "@material-ui/icons": "^4.5.1",
     "@mdx-js/loader": "^1.5.1",
     "@next/mdx": "^9.1.1",
+    "dotenv": "^8.2.0",
     "emotion-theming": "^10.0.19",
     "isomorphic-unfetch": "^3.0.0",
     "next": "9.1.1",
