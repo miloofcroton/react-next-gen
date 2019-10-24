@@ -6,6 +6,8 @@ import Link from 'next/link';
 import Layout from '../components/Layout';
 import { NextPage } from 'next';
 
+import Button from '@material-ui/core/Button';
+
 const IndexPage: NextPage = () => {
   return (
     <Layout title="Home | Next.js Starter">
@@ -15,6 +17,9 @@ const IndexPage: NextPage = () => {
           <a>About</a>
         </Link>
       </p>
+      <Button variant="contained" color="primary">
+        Material UI enabled
+      </Button>
     </Layout>
   );
 };
