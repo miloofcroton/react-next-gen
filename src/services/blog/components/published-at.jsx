@@ -2,7 +2,7 @@
 import { jsx } from '@emotion/core';
 import React from 'react';
 import Link from 'next/link';
-import { parse, format } from 'date-fns';
+import moment from 'moment';
 
 const PublishedAt = (props) => {
   const { link, date } = props;
@@ -20,7 +20,7 @@ const PublishedAt = (props) => {
           }}
         >
           <time className="dt-published">
-            {format(parse(date, 'yyyy-MM-dd', new Date()), 'MMMM dd, yyyy')}
+            {moment(date, 'YYYY-MM-DD').format('MMMM do, YYYY')}
           </time>
         </a>
       </Link>
