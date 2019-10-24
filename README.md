@@ -15,7 +15,7 @@ React: The Next(js) Generation
   - testing-library
 - styling
   - emotion
-  - Ant Design?
+  - material-ui
 - docs/lab
   - storybook
   - typedoc
