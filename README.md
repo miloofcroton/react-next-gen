@@ -45,7 +45,11 @@ yarn install
 yarn start:watch
 ```
 
-(maybe now dev?)
+This also works if you have `now` configured:
+
+```bash
+now dev
+```
 
 ### Deploy
 
