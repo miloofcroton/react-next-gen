@@ -40,7 +40,7 @@ class InitialPropsDetail extends React.Component<Props> {
 
     return (
       <Layout
-        title={`${
+        pageTitle={`${
           item ? item.name : 'User Detail'
         } | Next.js + TypeScript Example`}
       >
