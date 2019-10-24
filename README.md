@@ -21,7 +21,7 @@ React: The Next(js) Generation
   - material-ui
 - build pipelines
   - next (the app)
-  - storybook (component playground)
+  - storybook (component lab)
   - typedoc (library documentation)
 - testing
   - jest
