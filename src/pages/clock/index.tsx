@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { startClock, serverRenderClock } from 'services/clocks/data/actions';
 import Examples from '../../services/clocks/components/Examples';
-import Layout from 'style/Layout';
+import MainLayout from 'style/layouts/Main';
 
 const UserIndex = ({ dispatch }) => {
 
@@ -16,9 +16,9 @@ const UserIndex = ({ dispatch }) => {
   }, []);
 
   return (
-    <Layout title="A Random Clock and Counter Example">
+    <MainLayout title="A Random Clock and Counter Example">
       <Examples />
-    </Layout>
+    </MainLayout>
   );
 };
 

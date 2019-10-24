@@ -2,7 +2,7 @@ import React from 'react';
 import { NextPageContext } from 'next';
 
 import { User } from 'services/users/data/types';
-import Layout from 'style/Layout';
+import MainLayout from 'style/layouts/Main';
 import ListDetail from 'lib/components/Detail';
 import { fetchWrapper } from 'lib/data/fetch';
 
@@ -30,22 +30,22 @@ class InitialPropsDetail extends React.Component<Props> {
 
     if (errors) {
       return (
-        <Layout title="Error | Next.js + TypeScript Example">
+        <MainLayout title="Error | Next.js + TypeScript Example">
           <p>
             <span style={{ color: 'red' }}>Error:</span> {errors}
           </p>
-        </Layout>
+        </MainLayout>
       );
     }
 
     return (
-      <Layout
+      <MainLayout
         title={`${
           item ? item.name : 'User Detail'
         } | Next.js + TypeScript Example`}
       >
         {item && <ListDetail item={item} />}
-      </Layout>
+      </MainLayout>
     );
   }
 }

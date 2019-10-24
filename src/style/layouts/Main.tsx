@@ -26,11 +26,11 @@ const Layout: React.FunctionComponent<Props> = ({
           <a>Home</a>
         </Link>{' '}
         |{' '}
-        <Link href="/about">
+        <Link href="/about/me">
           <a>About</a>
         </Link>{' '}
         |{' '}
-        <Link href="/blog/story">
+        <Link href="/blog">
           <a>Blog</a>
         </Link>{' '}
         |{' '}
