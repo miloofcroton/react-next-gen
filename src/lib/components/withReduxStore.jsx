@@ -4,7 +4,7 @@ import { initializeStore } from '../../store';
 const isServer = typeof window === 'undefined';
 const __NEXT_REDUX_STORE__ = '__NEXT_REDUX_STORE__';
 
-function getOrCreateStore (initialState) {
+const getOrCreateStore = (initialState) => {
   // Always make a new store if server, otherwise state is shared between requests
   if (isServer) {
     return initializeStore(initialState);
@@ -15,9 +15,9 @@ function getOrCreateStore (initialState) {
     window[__NEXT_REDUX_STORE__] = initializeStore(initialState);
   }
   return window[__NEXT_REDUX_STORE__];
-}
+};
 
-export default (App) => {
+const WithReduxStore = (App) => {
   return class AppWithRedux extends React.Component {
     static async getInitialProps (appContext) {
       // Get or Create the store with `undefined` as initialState
@@ -48,3 +48,5 @@ export default (App) => {
     }
   };
 };
+
+export default WithReduxStore;
