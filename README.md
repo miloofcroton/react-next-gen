@@ -2,7 +2,7 @@
 
 React: The Next(js) Generation
 
-## Features to enable
+## Features
 
 - dev tools
   - eslint
@@ -15,10 +15,14 @@ React: The Next(js) Generation
   - testing-library
 - styling
   - emotion
+  - Ant Design?
 - docs/lab
   - storybook
   - typedoc
-  -
+- state
+  - redux
+  - thunk
+  - apollo?
 
 ## How to use
 
