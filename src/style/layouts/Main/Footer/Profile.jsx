@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 // import React from 'react';
-import { siteMeta } from '../../../../../blog.config';
+import { siteMeta } from '../../../../../site.config';
 
 const Profile = () => (
   <div className="h-card" css={{

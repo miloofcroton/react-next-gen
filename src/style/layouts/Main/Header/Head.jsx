@@ -1,7 +1,7 @@
 import React from 'react';
 import NextHead from 'next/head';
 import { string } from 'prop-types';
-import { siteMeta } from '../../../../../blog.config';
+import { siteMeta } from '../../../../../site.config';
 
 const defaultDescription = siteMeta.description;
 const defaultOGURL = siteMeta.siteUrl;

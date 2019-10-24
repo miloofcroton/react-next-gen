@@ -2,7 +2,7 @@
 import { jsx } from '@emotion/core';
 // import React from 'react';
 import Link from 'next/link';
-import { siteMeta } from '../../../../../../blog.config';
+import { siteMeta } from '../../../../../../site.config';
 import PublishedAt from '../../published-at';
 import blogposts from '../../../../../services/blog/data/posts';
 import Layout from '../../../../../style/layouts/main';

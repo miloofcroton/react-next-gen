@@ -6,7 +6,7 @@ import pagination from 'pagination';
 import Layout from '../../style/layouts/main';
 import Post from '../../services/blog/components/layouts/blog-index-item';
 import blogposts from '../../services/blog/data/posts';
-import { siteMeta } from '../../../blog.config';
+import { siteMeta } from '../../../site.config';
 
 const Blog = ({ router, page = 1 }) => {
   const paginator = new pagination.SearchPaginator({
