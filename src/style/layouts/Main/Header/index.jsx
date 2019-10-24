@@ -2,9 +2,9 @@
 import { jsx } from '@emotion/core';
 import React from 'react';
 import PropTypes from 'prop-types';
-import Head from './head';
-import Nav from './nav';
-import Title from './title';
+import Head from './Head';
+import Nav from './Nav';
+import Title from './Title';
 
 const Header = ({ path, pageTitle, ogImage }) => {
   return (

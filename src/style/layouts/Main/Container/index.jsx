@@ -5,6 +5,7 @@ import React from 'react';
 const Container = ({ children }) => (
   <React.Fragment>
     <div css={{
+      label: 'container',
       maxWidth: '45rem',
       margin: '0 auto',
       padding: '0 1em',

@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 // import React from 'react';
-import Profile from './profile';
+import Profile from './Profile';
 
 const Footer = () => {
   return (

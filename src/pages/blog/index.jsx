@@ -3,9 +3,9 @@ import { withRouter } from 'next/router';
 import _ from 'lodash';
 import Link from 'next/link';
 import pagination from 'pagination';
-import Layout from '../../style/layouts/default';
+import Layout from '../../style/layouts/main';
 import Post from '../../services/blog/components/layouts/blog-index-item';
-import blogposts from '../../../posts/index';
+import blogposts from '../../services/blog/data/posts';
 import { siteMeta } from '../../../blog.config';
 
 const Blog = ({ router, page = 1 }) => {

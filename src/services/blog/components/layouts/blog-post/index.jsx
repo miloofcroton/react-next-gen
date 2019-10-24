@@ -4,8 +4,8 @@ import { jsx } from '@emotion/core';
 import Link from 'next/link';
 import { siteMeta } from '../../../../../../blog.config';
 import PublishedAt from '../../published-at';
-import blogposts from '../../../../../../posts/index';
-import Layout from '../../../../../style/layouts/default';
+import blogposts from '../../../../../services/blog/data/posts';
+import Layout from '../../../../../style/layouts/main';
 import SyntaxHighlight from './syntax-highlight';
 import NextPrevPost from './next-prev-post';
 

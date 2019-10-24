@@ -1,62 +1,30 @@
 import React from 'react';
-import Link from 'next/link';
-import Head from 'next/head';
-import Nav from './Nav';
+import Header from './Header';
+import Footer from './Footer';
+import Container from './Container';
 
-type Props = {
-  title?: string;
-};
+interface LayoutProps {
+  children: any;
+  path?: any;
+  pageTitle?: any;
+  ogImage?: any;
+}
 
-const Layout: React.FunctionComponent<Props> = ({
+const Layout: React.FunctionComponent<LayoutProps> = ({
+  path,
   children,
-  title = 'This is the default title',
-}) => (
-  <div>
-    <Head>
-      <title>{title}</title>
-      <link rel="icon" href="/favicon.ico" />
-      <meta charSet="utf-8" />
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-    </Head>
-    <header>
-      <Nav />
+  pageTitle,
+  ogImage
+}: LayoutProps) => {
+  return (
+    <Container>
+      <Header path={path} pageTitle={pageTitle} ogImage={ogImage} />
 
-      <nav>
-        <Link href="/">
-          <a>Home</a>
-        </Link>{' '}
-        |{' '}
-        <Link href="/about/me">
-          <a>About</a>
-        </Link>{' '}
-        |{' '}
-        <Link href="/blog">
-          <a>Blog</a>
-        </Link>{' '}
-        |{' '}
-        <Link href="/cars">
-          <a>Cars</a>
-        </Link>{' '}
-        |{' '}
-        <Link href="/clock">
-          <a>Clock</a>
-        </Link>{' '}
-        |{' '}
-        <Link href="/users">
-          <a>Users</a>
-        </Link>
-        |{' '}
-        <Link href="/auth/login">
-          <a>Login</a>
-        </Link>{' '}
-      </nav>
-    </header>
-    {children}
-    <footer>
-      <hr />
-      <span>I'm here to stay (Footer)</span>
-    </footer>
-  </div>
-);
+      <main>{children}</main>
+
+      <Footer />
+    </Container>
+  );
+};
 
 export default Layout;

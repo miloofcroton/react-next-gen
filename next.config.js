@@ -23,9 +23,10 @@ module.exports = withPlugins(
     // [withSass, sassConfig],
   ],
   {
-    // target: 'serverless',
+    // target: 'server' is necessary to export static files
     target: 'server',
     env: {
+      // this is how you get values from the '.env' files
       PORT: process.env.PORT,
     },
     webpack: (config, { defaultLoaders, isServer, dev } ) => {
@@ -51,7 +52,7 @@ module.exports = withPlugins(
         config.entry = async () => {
           const entries = { ...(await originalEntry()) };
           // This script imports components from the Next app, so it's transpiled to `.next/server/scripts/build-rss.js`
-          entries['./posts/rss-feed.js'] = './posts/rss-feed.js';
+          entries['./src/services/blog/data/rss-feed.js'] = './src/services/blog/data/rss-feed.js';
           return entries;
         };
       }

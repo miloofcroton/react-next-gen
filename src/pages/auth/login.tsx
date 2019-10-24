@@ -1,12 +1,12 @@
 import React from 'react';
 import Login from 'services/auth/components/Login';
-import MainLayout from 'style/layouts/Main';
+import Layout from 'style/layouts/main';
 
 const LoginPage = () => {
   return (
-    <MainLayout>
+    <Layout>
       <Login />
-    </MainLayout>
+    </Layout>
   );
 };
 

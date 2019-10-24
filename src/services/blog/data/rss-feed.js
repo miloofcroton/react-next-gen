@@ -2,7 +2,7 @@
 const fs = require('fs');
 const path = require('path');
 const posts = require('./get-blog-posts');
-const { siteMeta } = require('../blog.config');
+const { siteMeta } = require('../../../../blog.config');
 
 // https://jsonfeed.org/version/1
 const feed = {

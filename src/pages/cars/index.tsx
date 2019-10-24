@@ -1,13 +1,13 @@
 import React from 'react';
 import CarsOverview from 'services/cars/components/Overview';
-import MainLayout from 'style/layouts/Main';
+import Layout from 'style/layouts/main';
 import { mockCars } from 'services/cars/data/mocks';
 
 const CarsPage = () => {
   return (
-    <MainLayout>
+    <Layout>
       <CarsOverview cars={mockCars} />
-    </MainLayout>
+    </Layout>
   );
 };
 

@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 // import React from 'react';
-import MainLayout from 'style/layouts/Main';
+import Layout from 'style/layouts/main';
 import Button from '@material-ui/core/Button';
 import { NextPage } from 'next';
 
@@ -33,7 +33,7 @@ const cardStyles = {
 };
 
 const HomePage: NextPage = () => (
-  <MainLayout title="Home | React: The Next(js) Generation">
+  <Layout pageTitle="Home | React: The Next(js) Generation">
     <div css={{
         label: 'hero',
         width: '100%',
@@ -97,7 +97,7 @@ const HomePage: NextPage = () => (
         </a>
       </div>
     </div>
-  </MainLayout>
+  </Layout>
 );
 
 export default HomePage;
