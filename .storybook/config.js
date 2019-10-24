@@ -5,8 +5,8 @@ import { DocsPage, DocsContainer } from '@storybook/addon-docs/blocks';
 import storybookTheme from './theme';
 
 import { ThemeProvider } from 'emotion-theming';
-import theme from '../src/style/theme';
-import GlobalStyle from '../src/style/Globals';
+import theme from '../src/style/themes/main';
+import GlobalStyle from '../src/style/globals/main';
 
 import requireContext from 'require-context.macro';
 

@@ -6,8 +6,8 @@ import withReduxStore from '../lib/components/Shell/withReduxStore';
 import { Provider } from 'react-redux';
 
 // Emotion
-import GlobalStyle from 'style/Globals';
-import theme from 'style/theme';
+import GlobalStyle from 'style/globals/main';
+import main from 'style/themes/main';
 import { ThemeProvider } from 'emotion-theming';
 
 /** Notes:
@@ -27,7 +27,7 @@ class MyApp extends App {
     const { Component, pageProps, reduxStore } = this.props;
     return (
       <Provider store={reduxStore}>
-        <ThemeProvider theme={theme}>
+        <ThemeProvider theme={main}>
           <GlobalStyle />
           <Component {...pageProps} />
         </ThemeProvider>

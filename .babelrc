@@ -2,5 +2,8 @@
   "presets": [
     "next/babel"
   ],
-  "plugins": ["macros"]
+  "plugins": [
+    "preval",
+    "macros"
+  ]
 }

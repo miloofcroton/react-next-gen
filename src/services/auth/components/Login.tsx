@@ -17,8 +17,8 @@ export default class Login extends React.Component<LoginProps, LoginState> {
     this.state = {
       isLoginLoading: false,
       credentials: {
-        email: null,
-        password: null,
+        email: '',
+        password: '',
       },
     };
   }
