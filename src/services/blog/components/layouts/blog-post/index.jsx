@@ -3,9 +3,9 @@ import { jsx } from '@emotion/core';
 // import React from 'react';
 import Link from 'next/link';
 import { siteMeta } from '../../../../../../blog.config';
-import PublishedAt from '../../utils/published-at';
+import PublishedAt from '../../published-at';
 import blogposts from '../../../../../../posts/index';
-import Layout from '../default';
+import Layout from '../../../../../style/layouts/default';
 import SyntaxHighlight from './syntax-highlight';
 import NextPrevPost from './next-prev-post';
 

@@ -2,7 +2,7 @@
 import { jsx } from '@emotion/core';
 // import React from 'react';
 import Link from 'next/link';
-import PublishedAt from '../../utils/published-at';
+import PublishedAt from '../../published-at';
 
 const Post = ({ title, summary, date, path }) => (
   <article css={{

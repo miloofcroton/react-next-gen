@@ -35,6 +35,7 @@
     "enzyme-adapter-react-16": "^1.15.1",
     "enzyme-to-json": "^3.4.3",
     "eslint": "^6.5.1",
+    "eslint-plugin-mdx": "^1.6.1",
     "eslint-plugin-react": "^7.16.0",
     "husky": "^3.0.9",
     "jest": "^24.9.0",
@@ -101,8 +102,10 @@
     "types:markdown": "typedoc --theme markdown --out ./.types ./src/lib",
     "types:html": "typedoc --out ./.types ./src/lib",
     "types:clean": "rimraf ./.types",
-    "lint:check": "eslint ./src --ext .js,.jsx,.ts,.tsx",
+    "lint:check": "eslint ./src --ext .js,.jsx,.ts,.tsx,",
+    "lint:check-with-mdx": "eslint ./src --ext .js,.jsx,.ts,.tsx,.mdx",
     "lint:fix": "eslint ./src --ext .js,.jsx,.ts,.tsx --fix",
+    "lint:fix-with-mdx": "eslint ./src --ext .js,.jsx,.ts,.tsx,.mdx --fix",
     "lint:prettify": "prettier --write './src/**/*.{js,jsx,ts,tsx}'"
   }
 }

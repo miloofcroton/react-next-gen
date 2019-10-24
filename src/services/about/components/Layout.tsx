@@ -2,11 +2,11 @@
 import { jsx } from '@emotion/core';
 
 // import React from 'react';
-import Layout from '../default';
+import DefaultLayout from '../../../style/layouts/default';
 
 const Page = ({ meta, children }) => {
   return (
-    <Layout pageTitle={meta.title}>
+    <DefaultLayout pageTitle={meta.title}>
       <article>
         <header css={{
           marginBottom: '2em'
@@ -15,7 +15,7 @@ const Page = ({ meta, children }) => {
         </header>
         <div>{children}</div>
       </article>
-    </Layout>
+    </DefaultLayout>
   );
 };
 

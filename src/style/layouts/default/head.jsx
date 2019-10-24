@@ -1,7 +1,7 @@
 import React from 'react';
 import NextHead from 'next/head';
 import { string } from 'prop-types';
-import { siteMeta } from '../../../../../../blog.config';
+import { siteMeta } from '../../../../blog.config';
 
 const defaultDescription = siteMeta.description;
 const defaultOGURL = siteMeta.siteUrl;
@@ -13,6 +13,8 @@ const Head = (props) => (
     <title>
       {props.title ? `${props.title} - ${siteMeta.title}` : siteMeta.title}
     </title>
+    <link rel="icon" href="/favicon.ico" />
+
     <meta
       name="description"
       content={props.description || defaultDescription}

@@ -1,8 +1,6 @@
 import { withRouter } from 'next/router'
-import BlogPost from '../../services/posts/components/layouts/blog-post'
-import Page from '../../services/posts/components/layouts/page'
-
 import Link from 'next/link';
+import AboutLayout from '../../services/about/components/Layout'
 
 export const meta = {
   title: 'About',
@@ -11,7 +9,7 @@ export const meta = {
 }
 
 export default withRouter(({ children, router }) => (
-  <Page path={router.pathname} meta={meta}>
+  <AboutLayout path={router.pathname} meta={meta}>
     <h1>About</h1>
     <p>This is the about page</p>
     <p>
@@ -20,7 +18,7 @@ export default withRouter(({ children, router }) => (
       </Link>
     </p>
     {children}
-  </Page>
+  </AboutLayout>
 ))
 
 Hi! This is a placeholder page.

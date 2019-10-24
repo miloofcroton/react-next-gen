@@ -3,8 +3,8 @@ import { withRouter } from 'next/router';
 import _ from 'lodash';
 import Link from 'next/link';
 import pagination from 'pagination';
-import Layout from '../../services/posts/components/layouts/default';
-import Post from '../../services/posts/components/layouts/blog-index-item';
+import Layout from '../../style/layouts/default';
+import Post from '../../services/blog/components/layouts/blog-index-item';
 import blogposts from '../../../posts/index';
 import { siteMeta } from '../../../blog.config';
 

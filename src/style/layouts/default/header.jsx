@@ -12,10 +12,10 @@ const Header = ({ path, pageTitle, ogImage }) => {
       <Head title={pageTitle} ogImage={ogImage} />
 
       <header css={{
-        padding: '1em 0',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
+        // padding: '1em 0',
+        // display: 'flex',
+        // alignItems: 'center',
+        // justifyContent: 'space-between',
       }}>
         <Title path={path} />
         <Nav />
