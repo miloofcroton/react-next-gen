@@ -1,5 +1,7 @@
 import React from 'react';
 import App from 'next/app';
+import withReduxStore from '../lib/with-redux-store';
+import { Provider } from 'react-redux';
 
 class MyApp extends App {
   // Only uncomment this method if you have blocking data requirements for
@@ -15,9 +17,13 @@ class MyApp extends App {
   // }
 
   render() {
-    const { Component, pageProps } = this.props;
-    return <Component {...pageProps} />;
+    const { Component, pageProps, reduxStore } = this.props;
+    return (
+      <Provider store={reduxStore}>
+        <Component {...pageProps} />
+      </Provider>
+    );
   }
 }
 
-export default MyApp;
+export default withReduxStore(MyApp);

@@ -24,6 +24,7 @@
     "@types/node": "^12.11.5",
     "@types/react": "^16.9.9",
     "@types/react-dom": "^16.9.2",
+    "@types/react-redux": "^7.1.5",
     "@typescript-eslint/eslint-plugin": "^2.5.0",
     "@typescript-eslint/parser": "^2.5.0",
     "babel-jest": "^24.9.0",
@@ -43,6 +44,7 @@
     "react-docgen-typescript-loader": "^3.3.0",
     "react-docgen-typescript-webpack-plugin": "^1.1.0",
     "react-test-renderer": "^16.11.0",
+    "redux-devtools-extension": "^2.13.8",
     "require-context.macro": "^1.2.2",
     "rimraf": "^3.0.0",
     "ts-jest": "^24.1.0",
@@ -63,7 +65,12 @@
     "isomorphic-unfetch": "^3.0.0",
     "next": "9.1.1",
     "react": "16.11.0",
-    "react-dom": "16.11.0"
+    "react-dom": "16.11.0",
+    "react-redux": "^7.1.1",
+    "redux": "^4.0.4",
+    "redux-logger": "^3.0.6",
+    "redux-promise-middleware": "^6.1.1",
+    "redux-thunk": "^2.3.0"
   },
   "scripts": {
     "clean:node": "rimraf ./node_modules",
