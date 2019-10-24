@@ -6,9 +6,6 @@
   "engines": {
     "node": ">= 11.10.1"
   },
-  "resolutions": {
-    "typescript": "^3.6.4"
-  },
   "devDependencies": {
     "@babel/core": "^7.6.4",
     "@storybook/addon-actions": "^5.2.5",
@@ -82,6 +79,7 @@
     "start:prod": "next start",
     "build:server": "next build",
     "build:static": "next build && next export",
+    "build:rss": "node ./.next/serverless/posts/rss-feed.js",
     "deploy:prod": "now",
     "lab:start": "start-storybook -p 9001 -c .storybook",
     "lab:build": "build-storybook -c .storybook -o .storybook-static",
