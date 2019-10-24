@@ -32,12 +32,12 @@ const __CARS__ = [
 ];
 
 describe('Cars overview', () => {
-  it('renders the h1 title', () => {
+  test('renders the h1 title', () => {
     const overview = shallow(<Overview cars={[]} />);
     expect(overview.find('h1').text()).toEqual('Cars Overview');
   });
 
-  it('renders empty cars list when no cars are provided', () => {
+  test('renders empty cars list when no cars are provided', () => {
     const overview = shallow(<Overview cars={[]} />);
     expect(
       overview
@@ -48,7 +48,7 @@ describe('Cars overview', () => {
     ).toEqual('No cars');
   });
 
-  it('renders cars list with 3 items when 3 cars are provided', () => {
+  test('renders cars list with 3 items when 3 cars are provided', () => {
     const overview = shallow(<Overview cars={__CARS__} />);
     expect(
       overview
@@ -59,7 +59,7 @@ describe('Cars overview', () => {
     ).toHaveLength(3);
   });
 
-  it('renders cars list with the expected item on third place', () => {
+  test('renders cars list with the expected item on third place', () => {
     const overview = shallow(<Overview cars={__CARS__} />);
     expect(
       overview
@@ -71,7 +71,7 @@ describe('Cars overview', () => {
     ).toEqual('Volvo XC90');
   });
 
-  it('renders car detail after clicking on an item in cars list', () => {
+  test('renders car detail after clicking on an item in cars list', () => {
     const overview = shallow(<Overview cars={__CARS__} />);
     overview
       .find('.Cars__List')

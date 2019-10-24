@@ -5,7 +5,7 @@ import { shallow } from 'enzyme';
 import NiceCheckbox from './index';
 
 describe('NiceCheckbox', () => {
-  it('renders the checkbox with correct label', () => {
+  test('renders the checkbox with correct label', () => {
     const wrapper = shallow(
       <NiceCheckbox
         rootID="NiceCarCheckbox"

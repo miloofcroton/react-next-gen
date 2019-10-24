@@ -5,17 +5,17 @@ import { shallow } from 'enzyme';
 import Login from '../Login';
 
 describe('Login', () => {
-  it('renders the h1 title', () => {
+  test('renders the h1 title', () => {
     const login = shallow(<Login />);
     expect(login.find('h1').text()).toEqual('Login');
   });
 
-  it('renders the form', () => {
+  test('renders the form', () => {
     const login = shallow(<Login />);
     expect(login.find('form')).toHaveLength(1);
   });
 
-  it('changes the text of email', () => {
+  test('changes the text of email', () => {
     const login = shallow(<Login />);
     login.find('#formEmail').simulate('change', {
       target: {
@@ -31,7 +31,7 @@ describe('Login', () => {
     ).toEqual('some@test.com');
   });
 
-  it('changes the text of login button after clicking it', () => {
+  test('changes the text of login button after clicking it', () => {
     const login = shallow(<Login />);
     // eslint-disable-next-line @typescript-eslint/no-empty-function
     login.find('#loginSubmit').simulate('click', { preventDefault() {} });

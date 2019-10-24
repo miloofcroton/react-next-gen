@@ -14,17 +14,17 @@ const __CAR__ = {
 };
 
 describe('Car detail', () => {
-  it('renders correct title', () => {
+  test('renders correct title', () => {
     const detail = shallow(<Detail car={__CAR__} />);
     expect(detail.find('h1').text()).toEqual('Volvo XC60');
   });
 
-  it('renders correct list item', () => {
+  test('renders correct list item', () => {
     const detail = shallow(<Detail car={__CAR__} />);
     expect(detail.childAt(1).text()).toEqual('Engine : T5');
   });
 
-  it('renders correct equipment list item', () => {
+  test('renders correct equipment list item', () => {
     const detail = shallow(<Detail car={__CAR__} />);
     expect(
       detail
