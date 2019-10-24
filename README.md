@@ -13,6 +13,8 @@ React: The Next(js) Generation
       - thunk
       - promise
       - logger
+- content
+  - mdx
 - styling
   - emotion
     - css prop
