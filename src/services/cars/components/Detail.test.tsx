@@ -2,7 +2,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import Detail from './../Detail';
+import Detail from './Detail';
 
 const __CAR__ = {
   make: 'Volvo',

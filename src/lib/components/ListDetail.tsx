@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { User } from '../services/user/types';
+import { User } from 'services/users/data/types';
 
 type ListDetailProps = {
   item: User;

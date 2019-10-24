@@ -1,16 +1,14 @@
 module.exports = {
   roots: [
     '<rootDir>/src',
+    '<rootDir>/tests',
     '<rootDir>/.storybook',
   ],
-  // setupFiles: ['<rootDir>/src/tests/setupTests.ts'],
-  setupFilesAfterEnv: ['<rootDir>/src/tests/setupTests.ts'],
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|js?|tsx?|ts?)$',
-  // testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(j|t)sx?$',
   testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/'],
   transform: {
     '^.+\\.(j|t)sx?$': 'babel-jest',
-    // '^.+\\.tsx?$': 'ts-jest'
   },
   snapshotSerializers: ['enzyme-to-json/serializer'],
   moduleNameMapper: {

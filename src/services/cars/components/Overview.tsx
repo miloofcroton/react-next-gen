@@ -1,13 +1,12 @@
-import * as React from 'react';
-
-import * as T from './types';
+import React from 'react';
+import { Car, CarList } from '../data/types';
 
 export interface CarsOverviewProps {
-  cars?: T.CarList;
+  cars?: CarList;
 }
 
 export interface CarsOverviewState {
-  selectedCar: T.Car;
+  selectedCar: Car;
 }
 
 export default class CarsOverview extends React.Component<
@@ -22,11 +21,11 @@ export default class CarsOverview extends React.Component<
     };
   }
 
-  handleSelectCar = (car: T.Car): void => {
+  handleSelectCar = (car: Car): void => {
     this.setState({ selectedCar: car });
   }
 
-  renderCarsList = (cars?: T.CarList): JSX.Element => {
+  renderCarsList = (cars?: CarList): JSX.Element => {
     if (!cars || cars.length === 0) {
       return <p>No cars</p>;
     }
@@ -34,7 +33,7 @@ export default class CarsOverview extends React.Component<
     return (
       <ul>
         {cars.map(
-          (car: T.Car, index: number): JSX.Element => (
+          (car: Car, index: number): JSX.Element => (
             <li key={index} onClick={() => this.handleSelectCar(car)}>
               {car.make} {car.model}
             </li>
@@ -44,7 +43,7 @@ export default class CarsOverview extends React.Component<
     );
   }
 
-  renderCarInfo = (car: T.Car): JSX.Element => {
+  renderCarInfo = (car: Car): JSX.Element => {
     if (!car) {
       return null;
     }

@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { NextPageContext } from 'next';
 
-import { User } from '../../services/user/types';
-import Layout from '../../components/Layout';
-import ListDetail from '../../components/ListDetail';
-import { sampleFetchWrapper } from '../../utils/sample-api';
+import { User } from 'services/users/data/types';
+import Layout from 'lib/components/Layout';
+import ListDetail from 'lib/components/ListDetail';
+import { fetchWrapper } from 'lib/data/fetch';
 
 type Props = {
   item?: User;
@@ -15,11 +15,12 @@ class InitialPropsDetail extends React.Component<Props> {
   static getInitialProps = async ({ query }: NextPageContext) => {
     try {
       const { id } = query;
-      const item = await sampleFetchWrapper(
+      const item = await fetchWrapper(
         `http://localhost:${process.env.PORT}/api/users/${Array.isArray(id) ? id[0] : id}`,
       );
       return { item };
-    } catch (err) {
+    }
+    catch (err) {
       return { errors: err.message };
     }
   };

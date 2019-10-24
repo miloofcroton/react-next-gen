@@ -1,6 +1,6 @@
 import * as React from 'react';
 import ListItem from './ListItem';
-import { User } from '../services/user/types';
+import { User } from 'services/users/data/types';
 
 type Props = {
   items: User[];

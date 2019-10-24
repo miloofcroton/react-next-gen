@@ -1,6 +1,6 @@
 import fetch from 'isomorphic-unfetch';
 
-export const sampleFetchWrapper = async (
+export const fetchWrapper = async (
   input: RequestInfo,
   init?: RequestInit,
 ) => {

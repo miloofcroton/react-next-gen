@@ -2,7 +2,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import Overview from './../Overview';
+import Overview from './Overview';
 
 const __CARS__ = [
   {

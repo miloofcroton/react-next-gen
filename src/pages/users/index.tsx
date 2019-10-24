@@ -2,10 +2,10 @@ import React from 'react';
 import { NextPage } from 'next';
 import Link from 'next/link';
 
-import Layout from '../../components/Layout';
-import List from '../../components/List';
-import { User } from '../../services/user/types';
-import { sampleFetchWrapper } from '../../utils/sample-api';
+import Layout from 'lib/components/Layout';
+import List from 'lib/components/List';
+import { User } from 'services/users/data/types';
+import { fetchWrapper } from 'lib/data/fetch';
 
 type Props = {
   items: User[];
@@ -32,7 +32,7 @@ WithInitialProps.getInitialProps = async ({ pathname }) => {
   // Example for including initial props in a Next.js function component page.
   // Don't forget to include the respective types for any props passed into
   // the component.
-  const items: User[] = await sampleFetchWrapper(
+  const items: User[] = await fetchWrapper(
     `http://localhost:${process.env.PORT}/api/users`,
   );
 

@@ -1,9 +1,8 @@
-import * as React from 'react';
-
-import * as T from './types';
+import React from 'react';
+import { Car } from '../data/types';
 
 interface DetailProps {
-  car: T.Car;
+  car: Car;
 }
 
 const Detail: React.SFC<DetailProps> = ({ car }: DetailProps) => {
