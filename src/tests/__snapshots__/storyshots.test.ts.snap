@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots About|Welcome About This Library 1`] = `
+<div>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</div>
+`;
+
+exports[`Storyshots CSS|Input/Button Basic 1`] = `
+<button
+  className="css-1vwmpxe-Basic"
+  onClick={[Function]}
+>
+  Hello Button
+</button>
+`;
+
+exports[`Storyshots CSS|Input/Button Inverted 1`] = `
+<button
+  className="css-1bw3b1z-Inverted"
+>
+  Hello Button
+</button>
+`;
+
+exports[`Storyshots CSS|Input/Button With SVG 1`] = `
+<button
+  className="css-1hhrd3x-WithSVG"
+>
+  Dolla Dolla Bills
+  <svg
+    aria-hidden="true"
+    className="svg-inline--fa fa-money-bill fa-w-20 "
+    data-icon="money-bill"
+    data-prefix="fas"
+    focusable="false"
+    role="img"
+    style={Object {}}
+    viewBox="0 0 640 512"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M608 64H32C14.33 64 0 78.33 0 96v320c0 17.67 14.33 32 32 32h576c17.67 0 32-14.33 32-32V96c0-17.67-14.33-32-32-32zM48 400v-64c35.35 0 64 28.65 64 64H48zm0-224v-64h64c0 35.35-28.65 64-64 64zm272 176c-44.19 0-80-42.99-80-96 0-53.02 35.82-96 80-96s80 42.98 80 96c0 53.03-35.83 96-80 96zm272 48h-64c0-35.35 28.65-64 64-64v64zm0-224c-35.35 0-64-28.65-64-64h64v64z"
+      fill="currentColor"
+      style={Object {}}
+    />
+  </svg>
+</button>
+`;
