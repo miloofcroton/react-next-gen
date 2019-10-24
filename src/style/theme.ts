@@ -1,4 +1,4 @@
-export const mainTheme = {
+const mainTheme = {
   mode: 'light',
   colors: {
     primary: 'hsl(214, 100%, 21%)',
@@ -7,3 +7,5 @@ export const mainTheme = {
     quarternary: 'hsl(22, 78%, 24%)',
   }
 };
+
+export default mainTheme;

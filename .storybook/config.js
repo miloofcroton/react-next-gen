@@ -5,8 +5,8 @@ import { DocsPage, DocsContainer } from '@storybook/addon-docs/blocks';
 import storybookTheme from './theme';
 
 import { ThemeProvider } from 'emotion-theming';
-import { mainTheme } from '../src/theme/main';
-import { GlobalStyle } from '../src/theme/globals';
+import theme from '../src/layout/theme';
+import GlobalStyle from '../src/theme/Globals';
 
 import requireContext from 'require-context.macro';
 
@@ -25,7 +25,7 @@ const req = requireContext('../src', true, /.stories.(j|t)sx$/);
 const libraryDocs = requireContext('./docs', true, /.stories.(j|t)sx$/);
 
 addDecorator((story) => (
-  <ThemeProvider theme={mainTheme}>
+  <ThemeProvider theme={theme}>
     <GlobalStyle/>
     {story()}
   </ThemeProvider>

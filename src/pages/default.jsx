@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import Nav from 'lib/components/nav';
+import Nav from 'lib/style/nav';
 
 const Home = () => (
   <div>

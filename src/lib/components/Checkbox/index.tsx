@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface NiceCheckboxProps {
+interface CheckboxProps {
   rootID: string;
   id: string;
   name: string;
@@ -8,11 +8,11 @@ interface NiceCheckboxProps {
   label: string;
 }
 
-const NiceCheckbox: React.SFC<NiceCheckboxProps> = (
-  props: NiceCheckboxProps
+const Checkbox: React.SFC<CheckboxProps> = (
+  props: CheckboxProps
 ): JSX.Element => {
   return (
-    <div className="NiceCheckbox" id={props.rootID}>
+    <div id={props.rootID}>
       <input
         type="checkbox"
         id={props.id}
@@ -24,4 +24,4 @@ const NiceCheckbox: React.SFC<NiceCheckboxProps> = (
   );
 };
 
-export default NiceCheckbox;
+export default Checkbox;

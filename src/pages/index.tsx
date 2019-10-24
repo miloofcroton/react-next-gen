@@ -3,7 +3,7 @@ import { jsx } from '@emotion/core';
 
 // import React from 'react';
 import Link from 'next/link';
-import Layout from 'lib/components/Layout';
+import Layout from 'style/Layout';
 import { NextPage } from 'next';
 
 import Button from '@material-ui/core/Button';

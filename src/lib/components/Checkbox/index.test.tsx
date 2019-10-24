@@ -2,12 +2,12 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import NiceCheckbox from './index';
+import Checkbox from './index';
 
-describe('NiceCheckbox', () => {
+describe('Checkbox', () => {
   test('renders the checkbox with correct label', () => {
     const wrapper = shallow(
-      <NiceCheckbox
+      <Checkbox
         rootID="NiceCarCheckbox"
         id="CarAvailability"
         name="is_available"

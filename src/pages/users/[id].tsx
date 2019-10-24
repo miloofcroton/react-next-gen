@@ -1,9 +1,9 @@
-import * as React from 'react';
+import React from 'react';
 import { NextPageContext } from 'next';
 
 import { User } from 'services/users/data/types';
-import Layout from 'lib/components/Layout';
-import ListDetail from 'lib/components/ListDetail';
+import Layout from 'style/Layout';
+import ListDetail from 'lib/components/Detail';
 import { fetchWrapper } from 'lib/data/fetch';
 
 type Props = {

@@ -1,5 +1,5 @@
-import * as React from 'react';
-import ListItem from './ListItem';
+import React from 'react';
+import ListItem from './Item';
 import { User } from 'services/users/data/types';
 
 type Props = {
