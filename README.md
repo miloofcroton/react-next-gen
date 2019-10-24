@@ -4,25 +4,35 @@ React: The Next(js) Generation
 
 ## Features
 
+- components
+  - react
+    - hooks
+- state
+  - redux
+    - middleware
+      - thunk
+      - promise
+      - logger
+- styling
+  - emotion
+    - css prop
+    - theming
+    - globals
+  - material-ui
+- build pipelines
+  - next (the app)
+  - storybook (component playground)
+  - typedoc (library documentation)
+- testing
+  - jest
+  - enzyme
+  - testing-library
+  - storyshots
 - dev tools
   - eslint
   - prettier
   - husky
   - lint-staged
-- testing
-  - jest
-  - enzyme
-  - testing-library
-- styling
-  - emotion
-  - material-ui
-- docs/lab
-  - storybook
-  - typedoc
-- state
-  - redux
-  - thunk
-  - apollo?
 
 ## How to use
 
@@ -32,8 +42,10 @@ Install and run the development server:
 
 ```bash
 yarn install
-now dev
+yarn start:watch
 ```
+
+(maybe now dev?)
 
 ### Deploy
 
