@@ -3,7 +3,7 @@ import { NextPage } from 'next';
 import Link from 'next/link';
 
 import Layout from 'style/layouts/main';
-import List from 'lib/components/List';
+import List from 'services/users/components/List';
 import { User } from 'services/users/data/types';
 import { fetchWrapper } from 'lib/data/fetch';
 

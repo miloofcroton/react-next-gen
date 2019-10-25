@@ -3,7 +3,7 @@ import { NextPageContext } from 'next';
 
 import { User } from 'services/users/data/types';
 import Layout from 'style/layouts/main';
-import ListDetail from 'lib/components/Detail';
+import ListDetail from 'services/users/components/Detail';
 import { fetchWrapper } from 'lib/data/fetch';
 
 type Props = {
