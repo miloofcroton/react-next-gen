@@ -4,20 +4,7 @@
 
 ## About
 
-Starters for a full stack JavaScript application. The primary choices of technology are React, Material-UI, Apollo Client, Apollo Server, and several DBs.
-
-This project focuses on developing:
-
-- modular GraphQL API architecture
-  - one SQL DB option
-  - one NoSQL document DB option
-  - one NoSQL graph DB option
-- modular React architecture (with mini-apps hosted by a master app)
-  - one version for React on the web
-  - one version for React Native, for all mobile platforms
-
-The goal is for everything to work together, so you can pick your combination. Everything is about equal at the moment, in terms of features. This may change at some point in the future, but the goal will be to mostly bring them back to the same page.
-
+Welcome. This is a starter for React development. It is super flexible in terms of rendering strategy and deployment strategy, and it does a ton of great optimizations for you, so it's a great starting point for any new project.
 
 ## Table of contents
 
