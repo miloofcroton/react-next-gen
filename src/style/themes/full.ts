@@ -29,7 +29,7 @@ const mainThemeInput: ThemeInput = {
       ...defaultThemeInput.palette.fonts,
       sans: {
         ...defaultThemeInput.palette.fonts.sans,
-        fontFamily: `'Circular-Air-Book', sans-serif`,
+        fontFamily: `Roboto, Lato, Helvetica, sans-serif`,
         lineHeight: 1.4,
         fontWeight: {
           thin: 100,
