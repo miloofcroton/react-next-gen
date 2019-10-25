@@ -2,6 +2,14 @@
   "name": "react-next-gen",
   "version": "0.1.0",
   "description": "Next.js boilerplate",
+  "keywords": [
+    "next.js",
+    "nextjs",
+    "react",
+    "typescript",
+    "emotion"
+  ],
+  "author": "Jack Toumey",
   "license": "ISC",
   "engines": {
     "node": ">= 11.10.1"
