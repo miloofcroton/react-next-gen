@@ -7,7 +7,7 @@ import { faMoneyBill } from '@fortawesome/free-solid-svg-icons';
 
 import ButtonNote from './Button.md';
 import ButtonInverted from './ButtonInverted.md';
-import { primaryButton, secondaryButton } from './Button';
+import { defaultButton, invertedButton, defaultButtonImage, baseButtonImage } from './Button';
 
 export default {
   title: 'CSS|Input/Button',
@@ -17,7 +17,7 @@ export default {
 /** This is just a basic example */
 export const Basic = () => (
   <button
-    css={primaryButton}
+    css={defaultButton}
     onClick={action('clicked')}
   >
     Hello Button
@@ -26,7 +26,7 @@ export const Basic = () => (
 
 export const Inverted = () => (
   <button
-    css={secondaryButton}
+    css={invertedButton}
   >
     Hello Button
   </button>
@@ -37,12 +37,24 @@ Inverted.story = {
 
 export const WithSVG = () => (
   <button
-    css={secondaryButton}
+    css={invertedButton}
   >
     Dolla Dolla Bills
     <FontAwesomeIcon
       icon={faMoneyBill}
+      css={defaultButtonImage}
     />
   </button>
 );
 
+export const WithSVGInline = () => (
+  <button
+    css={
+      invertedButton
+      // (theme) => ({ '& svg': defaultButtonImage(theme) })
+    }
+  >
+    <span>Dolla Dolla Bills</span>
+    <FontAwesomeIcon icon={faMoneyBill} />
+  </button>
+);
