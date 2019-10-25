@@ -197,3 +197,5 @@ Redux organization:
 ## Goals
 
 I want to flesh out what I'm doing with all that redux middleware. I might also do a version of this project with Apollo, and I might add a GraphQL/Express API too, but that is more on the backburner right at this moment.
+
+`zustand` looks awesome for a state library. Either that or some other hook-based method may be the future. I will try it when I get a chance.
